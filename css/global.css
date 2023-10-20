@@ -1,7 +1,16 @@
+:root{
+    --link-color: #4298BA;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a:link,a:active,a:hover,a:visited, a:default { 
+    color: var(--link-color);
+    text-decoration: none;
 }
 
 /* 
@@ -70,4 +79,5 @@ body{
 
 #Intro > p{
     width: 100wh;
+    margin: 20px 0;
 }
