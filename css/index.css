@@ -5,7 +5,7 @@ Header栏
 header{
     width: 100wh;
     height: 4vh;
-    background-color: gainsboro;
+    background-color: dimgray;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,6 +19,7 @@ header span{
 }
 
 header span p{
+    color: aliceblue;
     font-size: 20px; 
     margin-right: 120px;
 }
@@ -57,6 +58,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: aliceblue;
+    font-size: 30px;
+    background-color: black;
 }
 #Intro > h1{
     width: 100wh;
