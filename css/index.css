@@ -5,7 +5,7 @@ Header栏
 header{
     width: 100wh;
     height: 4vh;
-    background-color: dimgray;
+    background-color: var(--color-dark-gray);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -36,7 +36,7 @@ header span img{
 footer{
     width: 100wh;
     height: 2vh;
-    background-color: gainsboro;
+    background-color: var(--color-dark-gray);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,7 +60,7 @@ body{
     align-items: center;
     color: aliceblue;
     font-size: 30px;
-    background-color: black;
+    background-color: var(--color-black);
 }
 #Intro > h1{
     width: 100wh;
