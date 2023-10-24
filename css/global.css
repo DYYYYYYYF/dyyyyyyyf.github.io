@@ -14,3 +14,57 @@ a:link,a:active,a:hover,a:visited, a:default {
     color: var(--link-color);
     text-decoration: none;
 }
+
+/* header */
+header{
+    width: 100wh;
+    height: 4vh;
+    background-color: var(--color-dark-gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header span{
+    width: 20wh;
+    height: 4vh;
+    display: flex;
+    flex-direction: auto;
+}
+
+header span p{
+    color: aliceblue;
+    font-size: 20px; 
+    line-height: 4vh;
+    margin-right: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+header span a{
+    margin-left: 2vh;
+    height: 4vh;
+    display: flex;
+    flex-direction: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+header span img{
+    width: 3vh;
+    height: 3vh;
+}
+/* end header */
+
+/* footer */
+footer{
+    width: 100wh;
+    height: 2vh;
+    background-color: var(--color-dark-gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/* end footer */
