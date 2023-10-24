@@ -12,6 +12,7 @@ header{
 
 header span{
     width: 20wh;
+    height: 4vh;
     display: flex;
     flex-direction: auto;
 }
@@ -22,8 +23,16 @@ header span p{
     margin-right: 120px;
 }
 
+header span a{
+    margin-left: 2vh;
+    height: 4vh;
+    display: flex;
+    flex-direction: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 header span img{
-    margin-left: 10px;
     width: 3vh;
     height: 3vh;
 }
