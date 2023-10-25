@@ -1,6 +1,17 @@
+/* hidden_space */
+#hidden_space{
+    width: 80vw;
+    height: 96vh;
+    margin-top: 4vh;
+    position: fixed;
+    display: none;
+    background-color: aliceblue;
+}
+/* end hidden_space */
+
 /* body */
 body{
-    width: 100wh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background-color: var(--color-black);
@@ -8,7 +19,7 @@ body{
 
 /* intro */
 #Intro{
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,21 +28,15 @@ body{
     font-size: 30px;
     background-color: var(--color-black);
 }
-#Intro > h1{
-    width: 100wh;
-    margin: 20px 0;
-}
-
-#Intro > p{
-    width: 100wh;
+#Intro > h1, p{
     margin: 20px 0;
 }
 /* end intro */
 
 /* program */
 .program{
+    width: 100vw;
     height: 100vh;
-    width: 100wh;
     display: flex;
     color: aliceblue;
     flex-direction: row;
@@ -39,22 +44,21 @@ body{
 }
 
 .program div{
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
 }
 
 .program div p{
-    width: 100wh;
+    width: 40vw;
     text-align: center;
 }
 
 .program a{
-    width: 60%;
+    width: 60vw;
     height: 100vh;
     display: flex;
     align-items: center;

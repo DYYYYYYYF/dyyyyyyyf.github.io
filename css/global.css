@@ -10,6 +10,13 @@
     box-sizing: border-box;
 }
 
+/* hide scroll bar */
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 a:link,a:active,a:hover,a:visited, a:default { 
     color: var(--link-color);
     text-decoration: none;
@@ -17,25 +24,19 @@ a:link,a:active,a:hover,a:visited, a:default {
 
 /*heart icon*/
 #heart_icon{
-    border: 1px solid white;
     width: 5vh;
     height: 5vh;
     margin-top: 20vh;
-    margin-right: 5vh;
+    margin-left: 10px;
 
     display: flex;
     position: fixed;
-}
-
-#heart_icon img{
-    width: 5vh;
-    height: 5vh;
 }
 /*end heart icon*/
 
 /* header */
 header{
-    width: 100wh;
+    width: 100vw;
     height: 4vh;
     background-color: var(--color-dark-gray);
     display: flex;
@@ -45,12 +46,12 @@ header{
 }
 
 header span{
-    width: 20wh;
     height: 4vh;
     display: flex;
     flex-direction: auto;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 header span p{
@@ -60,10 +61,11 @@ header span p{
     margin-right: 120px;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 header span a{
-    margin-left: 2vh;
+    width: 10vw;
     height: 4vh;
     display: flex;
     flex-direction: auto;
@@ -79,7 +81,7 @@ header span img{
 
 /* footer */
 footer{
-    width: 100wh;
+    width: 100vw;
     height: 2vh;
     background-color: var(--color-dark-gray);
     display: flex;
