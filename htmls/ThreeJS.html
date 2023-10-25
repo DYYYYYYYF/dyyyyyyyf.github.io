@@ -11,6 +11,11 @@
 <script src="../javascript/json-loader.js"></script>
 <script src="../javascript/three/three.min.js"></script>
 
+<span id="heart_icon">
+   <img src="../asset/icon/heart-icon-white-512.png" onclick="click_like_img()">
+   <p id="__like_count"></p>
+</span>
+
 <header>
    <span>
          <a href="../index.html">
@@ -18,16 +23,12 @@
          </a>
    </span>
    <span>
-      <img src="../asset/icon/heart-icon-white-512.png" onclick="click_like_img()">
-      <p id="like_count"></p>
-  </span>
-   <span>
          <p>UncleDon</p>
    </span>
 </header>
 
 <body>
-	<div id="threejs-container" style="overflow: hidden;"></div>
+	<div id="threejs-container" style="width: 100vw;"></div>
 </body>
 
 <footer>
