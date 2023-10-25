@@ -31,6 +31,8 @@ header span{
     height: 4vh;
     display: flex;
     flex-direction: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 header span p{

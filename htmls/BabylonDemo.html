@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Babylon Template</title>
-
+        <link rel="shortcut icon" href="../asset/icon/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/global.css">
         <style>
             html, body {
@@ -20,16 +20,21 @@
                 touch-action: none;
             }
         </style>
-
-        <script src="../javascript/babylon/babylon.js"></script>
-        <script src="../javascript/babylon/loaders/babylonjs.loaders.min.js"></script>
     </head>
+
+    <script src="../javascript/json-loader.js"></script>
+    <script src="../javascript/babylon/babylon.js"></script>
+    <script src="../javascript/babylon/loaders/babylonjs.loaders.min.js"></script>
 
     <header>
         <span>
             <a href="../index.html">
                 <img src="../asset/icon/home-icon-white-256.png">
             </a>
+        </span>
+        <span>
+            <img src="../asset/icon/heart-icon-white-512.png">
+            <p id="like_count"></p>
         </span>
         <span>
             <p>UncleDon</p>

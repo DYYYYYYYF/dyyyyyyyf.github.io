@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../css/global.css">
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="../css/global.css">
+   <link rel="shortcut icon" href="../asset/icon/favicon.ico" type="image/x-icon">
 <title>ThreeJs Template</title>
 </head>
+
+<script src="../javascript/json-loader.js"></script>
 
 <header>
    <span>
@@ -12,6 +15,10 @@
             <img src="../asset/icon/home-icon-white-256.png">
          </a>
    </span>
+   <span>
+      <img src="../asset/icon/heart-icon-white-512.png">
+      <p id="like_count"></p>
+  </span>
    <span>
          <p>UncleDon</p>
    </span>
@@ -28,32 +35,32 @@
 </html>
 
 <script src="../javascript/three/three.min.js"></script>
-      <script type="module">
-         // Hello Cube App
-         // Your first Three.js application
-         // sizes
-         const width = window.innerWidth
-         const height = window.innerHeight
-         // scene
-         const scene = new THREE.Scene()
-         scene.background = new THREE.Color(0x262626)
-         // camera
-         const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100)
-         camera.position.set(0, 0, 10)
-         // cube
-         const geometry = new THREE.BoxGeometry(2, 2, 2)
-         const material = new THREE.MeshBasicMaterial({
-            color: 0xffffff,
-            wireframe: true
-         })
-         const cube = new THREE.Mesh(geometry, material)
-         scene.add(cube)
-         // renderer
-         const renderer = new THREE.WebGL1Renderer()
-         renderer.setSize(width, height)
-         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-         // rendering the scene
-         const container = document.querySelector('#threejs-container')
-         container.append(renderer.domElement)
-         renderer.render(scene, camera)
-      </script>
+<script type="module">
+   // Hello Cube App
+   // Your first Three.js application
+   // sizes
+   const width = window.innerWidth
+   const height = window.innerHeight
+   // scene
+   const scene = new THREE.Scene()
+   scene.background = new THREE.Color(0x262626)
+   // camera
+   const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100)
+   camera.position.set(0, 0, 10)
+   // cube
+   const geometry = new THREE.BoxGeometry(2, 2, 2)
+   const material = new THREE.MeshBasicMaterial({
+      color: 0xffffff,
+      wireframe: true
+   })
+   const cube = new THREE.Mesh(geometry, material)
+   scene.add(cube)
+   // renderer
+   const renderer = new THREE.WebGL1Renderer()
+   renderer.setSize(width, height)
+   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+   // rendering the scene
+   const container = document.querySelector('#threejs-container')
+   container.append(renderer.domElement)
+   renderer.render(scene, camera)
+</script>
