@@ -69,4 +69,10 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
+
+footer p{
+    height: 2vh;
+    color: aliceblue;
+    align-items: center;
+}
 /* end footer */

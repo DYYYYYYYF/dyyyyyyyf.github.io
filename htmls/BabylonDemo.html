@@ -1,90 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Babylon Template</title>
-        <link rel="shortcut icon" href="../asset/icon/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/global.css">
-        <style>
-            html, body {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Babylon Template</title>
+    <link rel="shortcut icon" href="../asset/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/BabylonDemo.css">
+</head>
 
-            #renderCanvas {
-                width: 100%;
-                height: 100%;
-                touch-action: none;
-            }
-        </style>
-    </head>
+<script src="../javascript/global.js"></script>
+<script src="../javascript/json-loader.js"></script>
+<script src="../javascript/babylon/babylon.js"></script>
 
-    <script src="../javascript/json-loader.js"></script>
-    <script src="../javascript/babylon/babylon.js"></script>
-    <script src="../javascript/babylon/loaders/babylonjs.loaders.min.js"></script>
+<header>
+    <span>
+        <a href="../index.html">
+            <img src="../asset/icon/home-icon-white-256.png">
+        </a>
+    </span>
+    <span>
+        <img src="../asset/icon/heart-icon-white-512.png" onclick="click_like_img()">
+        <p id="like_count"></p>
+    </span>
+    <span>
+        <p>UncleDon</p>
+    </span>
+</header>
 
-    <header>
-        <span>
-            <a href="../index.html">
-                <img src="../asset/icon/home-icon-white-256.png">
-            </a>
-        </span>
-        <span>
-            <img src="../asset/icon/heart-icon-white-512.png">
-            <p id="like_count"></p>
-        </span>
-        <span>
-            <p>UncleDon</p>
-        </span>
-    </header>
+<body>
+    <canvas id="renderCanvas" touch-action="none"></canvas> 
+</body>
 
-   <body>
+<footer>
+    <text style="color: aliceblue;">Babylon-Template</text>>
+</footer>
 
-    <canvas id="renderCanvas" touch-action="none"></canvas> //touch-action="none" for best results from PEP
+<script>
+    var canvas = document.getElementById("renderCanvas"); // 得到canvas对象的引用
+    var engine = new BABYLON.Engine(canvas, true); // 初始化 BABYLON 3D engine
 
-    <script>
-        var canvas = document.getElementById("renderCanvas"); // 得到canvas对象的引用
-        var engine = new BABYLON.Engine(canvas, true); // 初始化 BABYLON 3D engine
+    var createScene = function () {
 
-        var createScene = function () {
+        // 创建一个场景scene
+        var scene = new BABYLON.Scene(engine);
 
-            // 创建一个场景scene
-            var scene = new BABYLON.Scene(engine);
+        // 添加一个相机，并绑定鼠标事件
+        var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0,0,5), scene);
+        camera.attachControl(canvas, true);
 
-            // 添加一个相机，并绑定鼠标事件
-            var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0,0,5), scene);
-            camera.attachControl(canvas, true);
+        // 添加一组灯光到场景
+        var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
+        var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
-            // 添加一组灯光到场景
-            var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
-            var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+        // 添加一个球体到场景中
+        var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:2}, scene);
 
-            // 添加一个球体到场景中
-            var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:2}, scene);
+        return scene;
+    };
 
-            return scene;
-        };
+    var scene = createScene(); //Call the createScene function
 
-        var scene = createScene(); //Call the createScene function
+    // 最后一步调用engine的runRenderLoop方案，执行scene.render()，让我们的3d场景渲染起来
+    engine.runRenderLoop(function () {
+            scene.render();
+    });
 
-        // 最后一步调用engine的runRenderLoop方案，执行scene.render()，让我们的3d场景渲染起来
-        engine.runRenderLoop(function () {
-                scene.render();
-        });
-
-        // 监听浏览器改变大小的事件，通过调用engine.resize()来自适应窗口大小
-        window.addEventListener("resize", function () {
-                engine.resize();
-        });
-    </script>
-
-   </body>
-
-    <footer>
-        <text style="color: aliceblue;">Babylon-Template</text>>
-    </footer>
+    // 监听浏览器改变大小的事件，通过调用engine.resize()来自适应窗口大小
+    window.addEventListener("resize", function () {
+            engine.resize();
+    });
+</script>
 
 </html>

@@ -2,12 +2,14 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <link rel="stylesheet" href="../css/global.css">
+   <title>ThreeJs Template</title>
    <link rel="shortcut icon" href="../asset/icon/favicon.ico" type="image/x-icon">
-<title>ThreeJs Template</title>
+   <link rel="stylesheet" href="../css/global.css">
 </head>
 
+<script src="../javascript/global.js"></script>
 <script src="../javascript/json-loader.js"></script>
+<script src="../javascript/three/three.min.js"></script>
 
 <header>
    <span>
@@ -16,7 +18,7 @@
          </a>
    </span>
    <span>
-      <img src="../asset/icon/heart-icon-white-512.png">
+      <img src="../asset/icon/heart-icon-white-512.png" onclick="click_like_img()">
       <p id="like_count"></p>
   </span>
    <span>
@@ -25,16 +27,15 @@
 </header>
 
 <body>
-	<div id="threejs-container"></div>
+	<div id="threejs-container" style="overflow: hidden;"></div>
 </body>
 
-   <footer>
-      <text style="color: aliceblue;">ThreeJS-Template</text>>
-   </footer>
+<footer>
+   <text style="color: aliceblue;">ThreeJS-Template</text>>
+</footer>
 
 </html>
 
-<script src="../javascript/three/three.min.js"></script>
 <script type="module">
    // Hello Cube App
    // Your first Three.js application
