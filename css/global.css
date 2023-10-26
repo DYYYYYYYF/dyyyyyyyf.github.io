@@ -53,6 +53,7 @@ a:link,a:active,a:hover,a:visited, a:default {
 }
 
 #heart_icon img{
+    margin-left: 10px;
     width: 5vh;
     height: 5vh;
 }
