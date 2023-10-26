@@ -1,14 +1,3 @@
-/* hidden_space */
-#hidden_space{
-    width: 80vw;
-    height: 96vh;
-    margin-top: 4vh;
-    position: fixed;
-    display: none;
-    background-color: aliceblue;
-}
-/* end hidden_space */
-
 /* body */
 body{
     width: 100vw;

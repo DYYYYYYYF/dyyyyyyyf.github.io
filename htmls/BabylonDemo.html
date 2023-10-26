@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="../css/BabylonDemo.css">
 </head>
 
-<script src="../javascript/global.js"></script>
-<script src="../javascript/json-loader.js"></script>
-<script src="../javascript/babylon/babylon.js"></script>
+<!-- hidden space -->
+<div id="hidden_space">
+    <div id="hidden_space_content">
+        <h1>Babylon Demo Page</h1>
+        <p>
 
-<span id="heart_icon">
-    <img src="../asset/icon/heart-icon-white-512.png" onclick="click_like_img()">
-    <p id="__like_count"></p>
-</span>
+        </p>
+    </div>
+ 
+    <!-- heart_icon -->
+    <div id="heart_icon">
+        <img src="../asset/icon/heart-icon-white-512.png">
+        <p id="__like_count"></p>
+    </div>
+</div>
 
 <header>
     <span>
@@ -35,6 +42,10 @@
 <footer>
     <text style="color: aliceblue;">Babylon-Template</text>>
 </footer>
+
+<script src="../javascript/global.js"></script>
+<script src="../javascript/json-loader.js"></script>
+<script src="../javascript/babylon/babylon.js"></script>
 
 <script>
     var canvas = document.getElementById("renderCanvas"); // 得到canvas对象的引用
