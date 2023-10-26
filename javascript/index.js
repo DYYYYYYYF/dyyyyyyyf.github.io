@@ -1,7 +1,3 @@
-function click_like_img(){
-    window.alert("Thanks for your heart!")
-}
-
 var page_shown = false
 
 function show_left_space(){
@@ -14,7 +10,7 @@ function show_left_space(){
     hidden_space.animate([
         {transform: 'translateX(-75vw)'},
         {transform: 'translateX(0vw)'}
-    ], 1000)
+    ], 1500)
     hidden_space.style.left = "0vw"
 
     // change callback
@@ -32,7 +28,7 @@ function hide_left_space(){
     hidden_space.animate([
         {transform: 'translateX(75vw)'},
         {transform: 'translateX(0vw)'}
-    ], 1000)
+    ], 1500)
     hidden_space.style.left = "-75vw"
 
     //change heart-icon callback
