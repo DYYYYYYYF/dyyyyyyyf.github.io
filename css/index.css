@@ -17,9 +17,10 @@ body{
     font-size: 30px;
     background-color: var(--color-black);
 }
-#Intro > h1, p{
+#Intro > h1, h2, h3, p{
     margin: 20px 0;
 }
+
 /* end intro */
 
 /* program */
@@ -43,7 +44,7 @@ body{
 
 .program div p{
     width: 40vw;
-    text-align: center;
+    text-align: left;
 }
 
 .program a{
