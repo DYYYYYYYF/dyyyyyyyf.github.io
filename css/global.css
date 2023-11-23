@@ -26,6 +26,7 @@ a:link,a:active,a:hover,a:visited, a:default {
 #hidden_space{
     /* Init location */
     left: -75vw;
+    top: 4vh;
 
     /* bouding */
     width: 80vw;
